@@ -1,0 +1,82 @@
+[gd_scene load_steps=16 format=3 uid="uid://0haq45w1kcgh"]
+
+[ext_resource type="PackedScene" uid="uid://brqbe54oa7pa8" path="res://Assets/witchhut.glb" id="1_seg5d"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ac63j"]
+albedo_color = Color(0.309804, 0.0666667, 0.0470588, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qr40n"]
+albedo_color = Color(0.4, 0.239216, 0.00784314, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3gjfj"]
+albedo_color = Color(0.392157, 0.188235, 0.0823529, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pddcy"]
+albedo_color = Color(0.337255, 0.152941, 0.054902, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5bbrp"]
+albedo_color = Color(0.207843, 0.101961, 0.0352941, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_28qq0"]
+albedo_color = Color(0.270588, 0.376471, 0.933333, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mj77a"]
+albedo_color = Color(0.807843, 0.211765, 0.270588, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m4ihx"]
+albedo_color = Color(0.843137, 0.572549, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ph61f"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5kd5u"]
+albedo_color = Color(0.4, 0.141176, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i5232"]
+albedo_color = Color(0.411765, 0.776471, 0.156863, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mynh1"]
+albedo_color = Color(0.133333, 0.113725, 0.0941176, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jocko"]
+albedo_color = Color(0.27451, 0.176471, 0.0862745, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wy0ca"]
+albedo_color = Color(0.376471, 0.156863, 0.0627451, 1)
+
+[node name="Hut" instance=ExtResource("1_seg5d")]
+
+[node name="Room" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_ac63j")
+
+[node name="Table" parent="." index="1"]
+surface_material_override/0 = SubResource("StandardMaterial3D_qr40n")
+surface_material_override/1 = SubResource("StandardMaterial3D_3gjfj")
+
+[node name="BookCaseLargeBooks" parent="." index="2"]
+surface_material_override/0 = SubResource("StandardMaterial3D_pddcy")
+surface_material_override/1 = SubResource("StandardMaterial3D_5bbrp")
+surface_material_override/2 = SubResource("StandardMaterial3D_28qq0")
+surface_material_override/3 = SubResource("StandardMaterial3D_mj77a")
+surface_material_override/4 = SubResource("StandardMaterial3D_m4ihx")
+surface_material_override/5 = SubResource("StandardMaterial3D_ph61f")
+
+[node name="Plant" parent="." index="3"]
+surface_material_override/0 = SubResource("StandardMaterial3D_5kd5u")
+surface_material_override/1 = SubResource("StandardMaterial3D_i5232")
+
+[node name="Lamp2" parent="." index="4"]
+transform = Transform3D(3.06504, 0, 0, 0, 3.06504, 0, 0, 0, 3.06504, -4.21962, 0.0242557, 4.91084)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lamp2" index="0"]
+transform = Transform3D(0.32626, 0, 0, 0, 0.32626, 0, 0, 0, 0.32626, 0.123689, 1.29036, -0.0860983)
+light_color = Color(0.741176, 0.603922, 0.541176, 1)
+light_energy = 1.769
+omni_range = 8.99207
+
+[node name="SofaDouble" parent="." index="5"]
+surface_material_override/0 = SubResource("StandardMaterial3D_mynh1")
+
+[node name="Closet1" parent="." index="9"]
+surface_material_override/0 = SubResource("StandardMaterial3D_jocko")
+surface_material_override/1 = SubResource("StandardMaterial3D_wy0ca")
